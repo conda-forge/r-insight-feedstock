@@ -1,4 +1,4 @@
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/insight_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/insight/insight_{{ version }}.tar.gz
-  sha256: e6c4ee2754651530f5d67a14ca172fa4d5190dedc6b52530bb23cadafc4a08f9
+  sha256: 92d13b26e0a72ab1d846a0ca3653c07a868fc878f7f6f897c347857d793b4e3a
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -36,17 +36,13 @@ test:
 about:
   home: https://easystats.github.io/insight/
   license: GPL-3
-  summary: 'A tool to provide an easy, intuitive and consistent access to  information contained
-    in various R models, like model formulas, model terms,  information about random
-    effects, data that was used to fit the model or  data from response variables. ''insight''
-    mainly revolves around two types  of functions: Functions that find (the names of)
-    information, starting with  ''find_'', and functions that get the underlying data,
-    starting with ''get_''.  The package has a consistent syntax and works with many
-    different model  objects, where otherwise functions to access these information
-    are missing.'
+  summary: "A tool to provide an easy, intuitive and consistent access to  information contained in various R models, like model formulas, model terms,  information\
+    \ about random effects, data that was used to fit the model or  data from response variables. 'insight' mainly revolves around two types  of functions: Functions\
+    \ that find (the names of) information, starting with  'find_', and functions that get the underlying data, starting with 'get_'.  The package has a consistent\
+    \ syntax and works with many different model  objects, where otherwise functions to access these information are missing."
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
