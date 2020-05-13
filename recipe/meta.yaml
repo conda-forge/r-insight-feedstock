@@ -1,4 +1,4 @@
-{% set version = "0.8.3" %}
+{% set version = "0.8.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/insight_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/insight/insight_{{ version }}.tar.gz
-  sha256: d2a3f53a9d548909d50a74b67a369169d122beed62ca5ef90db822333251a552
+  sha256: 619393b2cd5019dad5834611e16086120522a4cf31466502b9d7d6cf00ea4936
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,10 +36,8 @@ test:
 about:
   home: https://easystats.github.io/insight/
   license: GPL-3
-  summary: "A tool to provide an easy, intuitive and consistent access to  information contained in various R models, like model formulas, model terms,  information\
-    \ about random effects, data that was used to fit the model or  data from response variables. 'insight' mainly revolves around two types  of functions: Functions\
-    \ that find (the names of) information, starting with  'find_', and functions that get the underlying data, starting with 'get_'.  The package has a consistent\
-    \ syntax and works with many different model  objects, where otherwise functions to access these information are missing."
+  summary: "A tool to provide an easy, intuitive and consistent access to  information contained in various R models, like model formulas, model terms,  information about random effects, data that was used to fit the model or  data from response variables. 'insight' mainly revolves around two types  of functions: Functions\
+    \ that find (the names of) information, starting with  'find_', and functions that get the underlying data, starting with 'get_'.  The package has a consistent syntax and works with many different model  objects, where otherwise functions to access these information are missing."
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
