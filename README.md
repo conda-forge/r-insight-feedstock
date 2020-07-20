@@ -5,7 +5,7 @@ Home: https://easystats.github.io/insight/
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A tool to provide an easy, intuitive and consistent access to  information contained in various R models, like model formulas, model terms,  information about random effects, data that was used to fit the model or  data from response variables. 'insight' mainly revolves around two types  of functions: Functions that find (the names of) information, starting with  'find_', and functions that get the underlying data, starting with 'get_'.  The package has a consistent syntax and works with many different model  objects, where otherwise functions to access these information are missing.
 
