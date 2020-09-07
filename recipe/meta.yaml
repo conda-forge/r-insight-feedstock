@@ -1,4 +1,4 @@
-{% set version = "0.9.1" %}
+{% set version = "0.9.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/insight_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/insight/insight_{{ version }}.tar.gz
-  sha256: 46f16c89321c0b70e7c371439bff954050b26f3e8739deff3ae057a0cbfbde34
+  sha256: b1ba4540264e1d35fbf65f2a0a6f5b44cbce2776bd16f8c4472c4e24099ea320
 
 build:
   merge_build_host: true  # [win]
