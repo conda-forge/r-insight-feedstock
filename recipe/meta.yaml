@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/insight_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/insight/insight_{{ version }}.tar.gz
-  sha256: e537b74c195f363d8d2a5a015b0c91aed27f83f2ea5cfa67a947062476db5079
+  sha256: a4a73f2737a74509d78d6cb922165386d3be301ed08e3f462270c40d06b5cc0f
 
 build:
   number: 0
